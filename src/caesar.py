@@ -104,5 +104,4 @@ if __name__ == '__main__':
         tmp.append(decode(letter))
 
     print(''.join(tmp))
-
     
