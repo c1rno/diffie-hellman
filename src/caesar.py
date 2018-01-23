@@ -36,42 +36,6 @@ ABC = [
     'Я'
 ]
 
-codedABC = [
-    'Г',
-    'Д',
-    'Е',
-    'Ё',
-    'Ж',
-    'З',
-    'И',
-    'Й',
-    'К',
-    'Л',
-    'М',
-    'Н',
-    'О',
-    'П',
-    'Р',
-    'С',
-    'Т',
-    'У',
-    'Ф',
-    'Х',
-    'Ц',
-    'Ч',
-    'Ш',
-    'Щ',
-    'Ъ',
-    'Ы',
-    'Ь',
-    'Э',
-    'Ю',
-    'Я',
-    'А',
-    'Б',
-    'В'
-]
-
 KEY = 3
 
 
@@ -91,17 +55,21 @@ if __name__ == '__main__':
     original = 'ПРИВЕТ'
     decoded = 'ТУЛЕИХ'
 
-    tmp = []
-    
-    for letter in original:
-        tmp.append(code(letter))
+    print(
+        ''.join(
+            map(
+                code,
+                original
+            )
+        )
+    )
 
-    print(''.join(tmp))
+    print(
+        ''.join(
+            map(
+                decode,
+                decoded
+            )
+        )
+    )
 
-    tmp = []
-    
-    for letter in decoded:
-        tmp.append(decode(letter))
-
-    print(''.join(tmp))
-    
