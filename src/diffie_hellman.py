@@ -26,5 +26,4 @@ if __name__ == '__main__':
 
     print('Alice', alice)
     print('Bob', bob)
-
     
