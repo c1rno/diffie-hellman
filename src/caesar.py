@@ -1,5 +1,3 @@
-from .common import *
-
 ABC = [
     'А',
     'Б',
@@ -51,25 +49,32 @@ def decode(letter: str, key: int = KEY)-> str:
     return ABC[decoded_index]
 
 
+def code_word(word: str) -> str:
+    return ''.join(
+        map(
+            code,
+            word
+        )
+    )
+
+
+def decode_word(word: str) -> str:
+    return ''.join(
+        map(
+            decode,
+            word
+        )
+    )
+
+
 if __name__ == '__main__':
     original = 'ПРИВЕТ'
-    decoded = 'ТУЛЕИХ'
+    coded = code_word(original)
+    decoded = decode_word(coded)
 
-    print(
-        ''.join(
-            map(
-                code,
-                original
-            )
-        )
-    )
-
-    print(
-        ''.join(
-            map(
-                decode,
-                decoded
-            )
-        )
-    )
+    print('''
+original = {}
+coded = {}
+decoded = {}
+    '''.format(original, coded, decoded))
 
