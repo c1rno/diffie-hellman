@@ -24,7 +24,15 @@ def test_decode_word():
 def test_fail_decode_word():
     assert caesar.decode_word('ПУЛЕИХ') != 'ПРИВЕТ'
 
-    
+
+def test_code_with_different_keys():
+    assert caesar.code_word('ПРИВЕТ', 2) != caesar.code_word('ПРИВЕТ', 3)
+
+
+def test_decode_with_different_keys():
+    assert caesar.decode_word('ТУЛЕИХ', 2) != caesar.decode_word('ТУЛЕИХ', 3)
+
+
 def test_naive_modexp():
     assert diffie_hellman.naive_modexp(3, 3, 3) == 0
 
